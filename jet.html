@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Assistant|Monoton&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="jet.css">
+		<script src="jet.php"></script>
+       <title>Profile</title>
+       <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Monoton&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Merriweather+Sans|Monoton&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <head>
+     
+    <body>
+     
+   
+    
+   
+      <div class="preloader">
+         <div class="preloader__row">
+           <div class="preloader__item"></div>
+           <div class="preloader__item"></div>
+         </div>
+       </div>
+
+  <div id="main-menu" onclick="mouse()">
+     <div id="logo-menu">
+       <img src="second-logo.png" id="logo" height="70">
+
+     </div>
+   
+<div id="none-menu">
+     <div id="li-menu">
+     <li><a href="">about</a></li>
+     <li><a href="">contacts</a></li>
+    </div>
+   </div>
+
+
+  </div>
+    
+      
+
+       <div id="first-container">
+         
+      <div class="content">
+           <div id="inform">
+          <img src="marco.jpg" id="marco-img">
+           
+            <p id="instagram"><i class="fab fa-instagram"></i>try_chill_</a></p>
+
+           </div>
+
+      </div>
+
+      <div class="content" style="border-right: none;">
+           <div id="text">
+             <h1>About me</h1>
+            <p>
+              Hi, my name is George and <br>I'm a web developer and a beginner freelancer.<br>
+You will see everything from the bottom :)
+            </p>
+
+
+           </div>
+
+      </div>
+
+
+       </div>
+
+
+        
+<div id="second-container">
+<div class="stack">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="150px" id="img-first">
+  
+
+  <div id="diagram-first">
+    <p id="around-one">level of knowledge = 100%</p>
+
+  </div>
+</div>    
+
+<div class="stack">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" height="160px" id="img-second">
+  
+
+  <div id="diagram-second">
+    <p id="around-two" >level of knowledge = 85%</p>
+
+  </div>
+
+</div>  
+
+<div class="stack">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" height="150px" class="img-diagram" id="img-third">
+  
+
+  <div id="diagram-third">
+    <p id="around-third" >level of knowledge = 50%</p>
+
+  </div>
+
+</div>  
+  
+  <div class="stack" style="margin-right: 13%;">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/800px-PHP-logo.svg.png" height="90px" id="img-bottom">
+  
+
+  <div id="diagram-forth">
+  <p id="around-four" >in the process </p>  
+
+  </div>
+
+</div>  
+
+</div>
+
+
+
+
+   </body>
+   <script>
+      window.onload = function () {
+     
+        window.setTimeout( function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('loaded_hiding');
+        }, 2000);
+      }
+
+
+
+
+
+function mouse(){
+document.getElementById("main-menu").style.paddingRight = (document.getElementById("main-menu").style.paddingRight 
+== "0%") ? "20%" : "0%";
+   
+   document.getElementById("none-menu").style.display = (document.getElementById("none-menu").style.display
+== "none") ? "block" : "none";
+
+  }
+
+
+
+
+
+
+    </script>
+  
+
+
+</html>

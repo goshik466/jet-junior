@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+}
+.text {
+  border: none;
+}
+.container {
+display: inline-block;
+  background-color: black;
+text-align: center;
+  width: 100%;
+  
+ 
+}
+
+.mid {
+ margin: 2%;
+background-color: red;
+display: flex;
+justify-content: center;
+}
+
+.currancy{
+	background-color: blue;
+}
+#currancy-one{
+margin-right: 10%;
+}
