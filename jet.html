@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Assistant|Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Monoton&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="jj.png" type="image/x-icon" >
 		<link rel="stylesheet" href="jet.css">
 		<script src="jet.php"></script>
        <title>Profile</title>
@@ -21,6 +22,13 @@
          </div>
        </div>
 
+
+       <div id="first">
+        <div id="second" onclick="change()"></div>
+      </div>
+
+
+
   <div id="main-menu" onclick="mouse()">
      <div id="logo-menu">
        <img src="second-logo.png" id="logo" height="70">
@@ -28,10 +36,17 @@
      </div>
    
 <div id="none-menu">
+ 
      <div id="li-menu">
+     
      <li><a href="">about</a></li>
+     
      <li><a href="">contacts</a></li>
+     
+  
+
     </div>
+
    </div>
 
 
@@ -45,7 +60,7 @@
            <div id="inform">
           <img src="marco.jpg" id="marco-img">
            
-            <p id="instagram"><i class="fab fa-instagram"></i>try_chill_</a></p>
+          <p id="instagram"><i class="fab fa-instagram"></i>try_chill_</p>
 
            </div>
 
@@ -67,9 +82,20 @@ You will see everything from the bottom :)
 
        </div>
 
+    <div class="sli-down" style="position: absolute;
+    top:110%; left:48.4%">
+      
+       <div class="mini-sli">
+         
+       </div>
 
+
+    </div>
         
 <div id="second-container">
+  
+  
+
 <div class="stack">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="150px" id="img-first">
   
@@ -118,8 +144,121 @@ You will see everything from the bottom :)
 
 
 
+<div class="sli-down" style="margin-left: 48.5%; margin-top:5%;" id="js-sli">
+      
+       <div class="mini-sli" id="miniJs-sli">
+         
+       </div>
+
+
+    </div>
+
+
+    <div id="third-container">
+<h1><i class="fas fa-tools" style="font-size: 40px; margin-right: 0.5%; margin-top: 0;"></i>tools</h1>
+
+
+      <div class="slider">
+        <div class="slider__wrapper">
+          <div class="slider__item">
+            <div class="mini-cont">
+         <img src="https://i.ya-webdesign.com/images/bootstrap-svg-icon.png" height="170"  style="margin-top: 25%;">
+         
+         
+            </div>
+          </div>
+          <div class="slider__item">
+            <div  class="mini-cont" >
+              <img src="https://img.stackshare.io/service/2652/ZWREQYdH_400x400.jpg" height="150" style="margin-top: 28%;">
+
+              
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mini-cont"  >
+             
+              <img src="https://cdn.worldvectorlogo.com/logos/fontawesome-1.svg" height="150" style="margin-top: 28%;">
+
+              
+
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mini-cont" >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" height="150" style="margin-top: 28%;">
+
+              
+            
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mini-cont">
+              <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-512.png" height="150" style="margin-top: 28%;">
+
+         
+            
+          </div>
+          </div>
+          <div class="slider__item">
+            <div class="mini-cont" >
+              <img src="https://www.colorhexa.com/static/i/logo-x-large.png" height="170" style="margin-top: 28%;">
+
+            
+            
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="mini-cont" >
+              <img src="https://seeklogo.com/images/P/picsart-icon-logo-EE8CEAAED8-seeklogo.com.png" height="150" style="margin-top: 28%;">
+
+              
+            
+            
+            </div>
+          </div>
+        </div>
+        <a class="slider__control slider__control_left" href="#" role="button"></a>
+        <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+      </div>
+
+
+
+    </div>
+
+
+    
+
+
+
+   <div id="footer">
+     <div class="foot-mini"  id="padRR">
+   <img src="second-logo.png" height="70" >
+     </div>
+     <div class="foot-mini" id="padRRR">
+      <p style="color:black;  text-transform: uppercase; font-size:15px; margin-top: 6%;" id="logo-text">design by no logo.</p>
+    </div>
+    <div class="foot-mini" style="border-right: none;">
+         
+
+          <p style="color:black;  margin-top: 4.5%; margin-left: 4%;" id="loc-text" ><i class="fas fa-map-marker-alt" style="margin-right: 1%;" ></i>Kiev, Ukraine</p>
+          
+
+         
+        
+
+
+        
+    </div>
+
+
+   </div>
+
    </body>
    <script>
+
+
+
+
       window.onload = function () {
      
         window.setTimeout( function () {
@@ -142,6 +281,119 @@ document.getElementById("main-menu").style.paddingRight = (document.getElementBy
   }
 
 
+  var multiItemSlider = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"    
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента    
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          if (e.target.classList.contains('slider__control')) {
+            e.preventDefault();
+            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+            _transformItem(direction);
+          }
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+
+    var slider = multiItemSlider('.slider')
+
+function change(){
+	document.getElementById("second").style.left = (document.getElementById("second").style.left == "5%") ? "58%" : "5%";
+	document.getElementById("second").style.background = (document.getElementById("second").style.background == "white") ? "black" : "white";
+	document.getElementById("first").style.background = (document.getElementById("first").style.background == "black") ? "white" : "black"
+	document.body.style.background = (document.body.style.background == "blue") ? "red" : "blue"
+	document.querySelector(".content").style.borderRight = (document.querySelector(".content").style.borderRight == "1px solid black") ? "1px solid white" : "1px solid black";
+  let BigSli = document.querySelector(".sli-down") 
+  let i = document.querySelector(".mini-sli")
+  BigSli.style.border = (BigSli.style.border == "2px solid black") ? " 2px solid white" : " 2px solid black";
+  i.style.background = (i.style.background == "black") ? "white" : "black";
+
+let a = document.getElementById("js-sli")
+let b = document.getElementById("miniJs-sli")
+a.style.border = (a.style.border == "2px solid black") ? " 2px solid white" : " 2px solid black";
+ b.style.background = (b.style.background == "black") ? "white" : "black"; 
+
+
+ let c = document.getElementById("pppp")
+let d = document.getElementById("dddd")
+c.style.border = (c.style.border == "2px solid black") ? " 2px solid white" : " 2px solid black";
+ d.style.background = (d.style.background == "black") ? "white" : "black"; 
+
+
+
+}
 
 
 
