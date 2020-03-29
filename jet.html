@@ -9,7 +9,14 @@
        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Merriweather+Sans|Monoton&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <head>
-     
+    
+
+
+
+
+    
+
+
     <body>
      
    
@@ -23,10 +30,30 @@
        </div>
 
 
+<div id="adapt-menu" onclick="dapt()">
+<img src="second-logo.png" id="adapt-logo">
+<div id="adapt-none">
+  <div id="li-adapt">
+<li><a href="">about</a></li>
+<li><a href="">contacs</a></li>
+  </div>
+</div>
+</div>
+
+
+
+<script>
+function dapt(){
+document.getElementById("adapt-menu").style.paddingRight = (document.getElementById("adapt-menu").style.paddingRight == "0%") ? "80%" : "0%"
+document.getElementById("adapt-none").style.display = (document.getElementById("adapt-none").style.display == "none") ? "block" : "none"
+document.getElementById("adapt-none").style.left = (document.getElementById("adapt-none").style.left == "0%") ? "50%" : "0%"
+}
+</script>
+
        <div id="first">
         <div id="second" onclick="change()"></div>
       </div>
-
+  
 
 
   <div id="main-menu" onclick="mouse()">
@@ -56,8 +83,8 @@
 
        <div id="first-container">
          
-      <div class="content">
-           <div id="inform">
+      <div class="content" id="ad-inf">
+           <div id="inform" >
           <img src="marco.jpg" id="marco-img">
            
           <p id="instagram"><i class="fab fa-instagram"></i>try_chill_</p>
@@ -66,10 +93,10 @@
 
       </div>
 
-      <div class="content" style="border-right: none;">
+      <div class="content" style="border-right: none;" id="bodre-btm">
            <div id="text">
              <h1>About me</h1>
-            <p>
+            <p id="ada-tex">
               Hi, my name is George and <br>I'm a web developer and a beginner freelancer.<br>
 You will see everything from the bottom :)
             </p>
@@ -96,7 +123,7 @@ You will see everything from the bottom :)
   
   
 
-<div class="stack">
+<div class="stack" id="one-stack">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="150px" id="img-first">
   
 
@@ -106,7 +133,7 @@ You will see everything from the bottom :)
   </div>
 </div>    
 
-<div class="stack">
+<div class="stack" id="two-stack">
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" height="160px" id="img-second">
   
 
@@ -117,7 +144,7 @@ You will see everything from the bottom :)
 
 </div>  
 
-<div class="stack">
+<div class="stack" id="three-stack">
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" height="150px" class="img-diagram" id="img-third">
   
 
@@ -128,11 +155,11 @@ You will see everything from the bottom :)
 
 </div>  
   
-  <div class="stack" style="margin-right: 13%;">
+  <div class="stack" style="margin-right: 13%;" id="four-stack">
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/800px-PHP-logo.svg.png" height="90px" id="img-bottom">
   
 
-  <div id="diagram-forth">
+  <div id="diagram-forth" >
   <p id="around-four" >in the process </p>  
 
   </div>
@@ -394,6 +421,7 @@ c.style.border = (c.style.border == "2px solid black") ? " 2px solid white" : " 
 
 
 }
+
 
 
 
